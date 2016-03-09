@@ -1,3 +1,6 @@
+// Edited by Jonathan Tanner 9/3/16
+#define NOSLEEP
+
 // ==============================================================================
 // uDMX.c
 // firmware for usb to dmx interface
@@ -253,6 +256,10 @@ static PROGMEM char configDescrMIDI[] = {	/* USB configuration descriptor */
 // ------------------------------------------------------------------------------
 void sleepIfIdle()
 {
+	#ifdef NOSLEEP
+	return; //Jonathan Tanner 9/3/16
+	#endif
+	
 	if(TIFR & BV(TOV1)) {
 		cli();
 		if(!(GIFR & BV(INTF1))) {
