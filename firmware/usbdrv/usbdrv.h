@@ -1,5 +1,3 @@
-#define __AVR_LIBC_DEPRECATED_ENABLE__ //Jonathan Tanner 9/3/16
-
 /* Name: usbdrv.h
  * Project: V-USB, virtual USB port for Atmel's(r) AVR(r) microcontrollers
  * Author: Christian Starkjohann
