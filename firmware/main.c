@@ -57,7 +57,7 @@ typedef struct _midi_msg {
 // ------------------------------------------------------------------------------
 
 // device serial number, formatted as YearMonthDayNCounter
-PROGMEM int usbDescriptorStringSerialNumber[] = {USB_STRING_DESCRIPTOR_HEADER(11),'1','1','0','4','2','8','N','0','0','7','1'};
+const PROGMEM int usbDescriptorStringSerialNumber[] = {USB_STRING_DESCRIPTOR_HEADER(11),'1','1','0','4','2','8','N','0','0','7','1'};
 
 
 // ==============================================================================
@@ -82,7 +82,7 @@ static u16 lka_count;
 // Appendix B. Example: Simple MIDI Adapter (Informative)
 // B.1 Device Descriptor
 //
-static PROGMEM char deviceDescrMIDI[] = {	/* USB device descriptor */
+const static PROGMEM char deviceDescrMIDI[] = {	/* USB device descriptor */
 	18,			/* sizeof(usbDescriptorDevice): length of descriptor in bytes */
 	USBDESCR_DEVICE,	/* descriptor type */
 	0x10, 0x01,		/* USB version supported */
@@ -100,7 +100,7 @@ static PROGMEM char deviceDescrMIDI[] = {	/* USB device descriptor */
 };
 
 // B.2 Configuration Descriptor
-static PROGMEM char configDescrMIDI[] = {	/* USB configuration descriptor */
+const static PROGMEM char configDescrMIDI[] = {	/* USB configuration descriptor */
 	9,			/* sizeof(usbDescrConfig): length of descriptor in bytes */
 	USBDESCR_CONFIG,	/* descriptor type */
 	101, 0,			/* total length of data returned (including inlined descriptors) */
